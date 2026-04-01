@@ -50,6 +50,7 @@ runtime
 Shared from host:
 
 operating system kernel
+
 9. Why did hello-world run and then exit?
 
 The hello-world container runs a simple program that prints a message and then stops. Since there is no long-running process, the container exits after execution.
