@@ -1,8 +1,6 @@
 1. What is the difference between a Docker image and a Docker container?
 A Docker image is a stored template like busybox, which contains a filesystem and tools.
-
 A Docker container is a temporary instance created from that image, where a specific command runs.
-
 In my task:
 - busybox was the image
 - each docker run created a new container
