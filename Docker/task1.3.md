@@ -23,7 +23,7 @@ The -p 5000:5000 flag maps the host port 5000 to the container port 5000, allowi
 WORKDIR sets the default folder inside the container, so all following commands run from that location.
 
 9. Difference between RUN and CMD
-RUN and CMD serve different roles in a Dockerfile. RUN is used during the image build phase to execute commands like installing dependencies or setting up the environment, and it runs only once while building the image. CMD, on the other hand, is executed when the container starts and defines the main process of the container. This main process is usually a long-lived process, such as a web server or application, which keeps the container running. If the CMD process stops or exits, the container also stops, because a container’s lifecycle is directly tied to this main process.
+RUN and CMD serve different purposes in a Dockerfile. RUN is used during the image build process to execute commands like installing dependencies and setting up the environment, and it creates layers in the image. CMD is used when the container starts and defines the default command or main process that runs inside the container. While RUN has no effect at runtime, CMD controls the container’s lifecycle, so when the CMD process stops, the container also stops. 
 
 10. Which project files are included in the Docker image?
 The project files included in the Docker image are the ones copied using the COPY instruction in the Dockerfile. In this task, that includes app.py, requirements.txt, and any other files present in the project directory.
