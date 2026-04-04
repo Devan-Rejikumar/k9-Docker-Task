@@ -9,10 +9,19 @@ Running multiple containers manually is messy and error-prone because you have t
 3. What is a service in Docker Compose?
 
 A service in Docker Compose represents a single container definition. It includes details like which image to use, what environment variables to pass, what ports to expose, and how it connects to other services. For example, in this task, db, wordpress, and phpmyadmin are all services. Each service runs as its own container, but they are managed together as one application.
+A service defines:
+
+Which image to run
+Environment variables
+Ports
+Volumes
+Network
+
+👉 For that one component only
 
 4. How does Compose handle networking by default?
 
-Docker Compose automatically creates a network for all the services defined in the YAML file. All containers are connected to this shared network, which allows them to communicate with each other. You don’t need to manually create or connect networks. This automatic networking makes service-to-service communication simple and reliable.
+Docker Compose automatically creates a network and connects all services to it, enabling them to communicate using service names. All containers are connected to this shared network, which allows them to communicate with each other. You don’t need to manually create or connect networks. This automatic networking makes service-to-service communication simple and reliable.
 
 5. Why does db work as the database host for WordPress and PhpMyAdmin?
 

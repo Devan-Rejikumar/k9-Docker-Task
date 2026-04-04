@@ -22,6 +22,7 @@ Docker builds images layer by layer, from top to bottom. Each instruction create
 
 A multi-stage Docker build is a way of using multiple steps or stages in a single Dockerfile. One stage is used to build or prepare the application, and another stage is used to run it. The key idea is that only the required output from the build stage is copied into the final stage. This helps remove unnecessary files and keeps the final image clean and lightweight.
 
+
 7. How does a multi-stage build differ from a single-stage build?
 
 In a single-stage build, everything happens in one place. You install dependencies, build the app, and run it in the same image. This often leaves behind unnecessary files and tools. In a multi-stage build, you separate these steps. The first stage handles building and installing, and the final stage only contains what is needed to run the application. This results in a smaller, cleaner, and more secure image.
